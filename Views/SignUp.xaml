@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheFinalProjectMUOD.Views.SignUP">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Sign up "
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                   FontSize="Large"/>
+
+            <Label x:Name="ErrorMessage" TextColor="Red" Text="{Binding ErrorMessage}"></Label>
+
+            <Entry  Text="{Binding Name}" x:Name="TxtName"
+                   Placeholder="Enter Your Name"></Entry>
+            <Entry  Text="{Binding Email}" x:Name="TxtEmail"
+                   Placeholder="Enter Your email"></Entry>
+
+            <Entry  Text="{Binding Password}" IsPassword="True"
+                    x:Name="TxtPassword" 
+                   Placeholder="Enter Your password "
+                    ></Entry>
+
+            <Button Text="Sign Up"
+                    x:Name="ButtonSave"
+                    CornerRadius="15"
+                    Clicked="ButtonSave_Clicked" 
+                    Command="{Binding AddUserCommand}"
+                    >
+
+            </Button>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
